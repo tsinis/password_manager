@@ -20,6 +20,7 @@ class DbItem {
   }
 
   DbItem.fromMap(Map<String, dynamic> map) {
+    //TODO Add type-check.
     id = map[columnId] as int;
     name = map[columnName] as String;
     login = map[columnLogin] as String;
