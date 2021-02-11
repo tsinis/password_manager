@@ -12,8 +12,8 @@ class SecureStorage {
   Future<String> write(String key) async {
     await _storage.deleteAll();
     final String _encryptedKey = _randomValue;
-    await _storage.write(key: key, value: _randomValue);
-    return await _storage.read(key: key) ?? _encryptedKey;
+    await _storage.write(key: key, value: _encryptedKey);
+    return _encryptedKey;
   }
 
   String get _randomValue {

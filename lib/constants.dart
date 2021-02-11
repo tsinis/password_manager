@@ -3,4 +3,5 @@ const String dbName = 'database',
     columnName = 'name',
     columnLogin = 'login',
     columnPassword = 'password',
+    dbTextType = 'TEXT',
     whereID = '$columnId = ?';

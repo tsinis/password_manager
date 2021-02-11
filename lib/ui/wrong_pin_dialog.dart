@@ -13,16 +13,10 @@ class WrongPinDialog extends StatelessWidget {
         actions: [
           TextButton(
               onPressed: () => Navigator.pop(context, false),
-              child: const Text(
-                'NO, TRY AGAIN',
-                style: TextStyle(color: Colors.white),
-              )),
+              child: const Text('NO, TRY AGAIN', style: TextStyle(color: Colors.white))),
           TextButton(
               onPressed: () => Navigator.pop(context, true),
-              child: const Text(
-                'YES, CREATE',
-                style: TextStyle(color: Colors.red),
-              ))
+              child: const Text('YES, CREATE', style: TextStyle(color: Colors.red)))
         ],
       );
 }

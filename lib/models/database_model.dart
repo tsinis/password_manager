@@ -23,9 +23,9 @@ class UnlockedDb {
           await database.execute(
             'CREATE TABLE $dbName ('
             '$columnId INTEGER PRIMARY KEY,'
-            '$columnName TEXT,'
-            '$columnLogin TEXT,'
-            '$columnPassword TEXT'
+            '$columnName $dbTextType,'
+            '$columnLogin $dbTextType,'
+            '$columnPassword $dbTextType'
             ')',
           );
         },
@@ -34,6 +34,7 @@ class UnlockedDb {
     } catch (error) {
       // ignore: avoid_print
       print('Error: $error');
+      return false;
     }
     return _database.isOpen;
   }

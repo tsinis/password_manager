@@ -27,8 +27,8 @@ class LoginScreen extends StatelessWidget {
                   // obscureStyle: ObscureStyle(isTextObscure: true),
                 ),
                 controller: pinController,
-                pinLength: 4,
                 autoFocus: true,
+                keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.go,
                 onSubmit: (pin) async {
                   String encryptedKey = await _storage.read(pin);
